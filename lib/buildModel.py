@@ -44,7 +44,7 @@ def buildModelWithTrainingFiles(trainingFiles):
     model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 
     # Fit the model
-    model.fit(trainingData, expectedOutput, epochs = 2500, batch_size = 5)
+    model.fit(trainingData, expectedOutput, epochs = 250, batch_size = 5)
 
     # evaluate the model
     scores = model.evaluate(trainingData, expectedOutput)

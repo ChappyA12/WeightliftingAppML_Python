@@ -34,8 +34,8 @@ A series of programs written in Python using [Weightling App](https://github.com
 | .931 | .004 | .001 | .003 | .000 | .000 | .000 | .000 | .022 | .004 |
 
 ### Current accuracy (~550 training data points @ 2500 epochs, batch size 5):
- - Training data: 98.5%
- - Test data: 94.0%
+ - Training data: 98.5% :thumbsup:
+ - Test data: 94.0% :thumbsup:
 
 ### Current model
 ![Model Image](src/model.png)
