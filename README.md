@@ -1,1 +1,0 @@
-# WeightliftingAppML_Python

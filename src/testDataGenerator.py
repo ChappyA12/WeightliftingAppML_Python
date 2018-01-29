@@ -2,9 +2,10 @@
 import random
 import StringIO
 
-BODY_SPLITS = ["Abs / Core", "Back", "Biceps", "Cardio", "Chest", "Legs", "Olympic", "Shoulders", "Triceps"]
+BODY_SPLITS = ["Abs / Core", "Back", "Biceps", "Chest", "Legs", "Shoulders", "Triceps"]
+CLASSIFICATIONS = ["Arms", "Chest and Tri", "Chest", "Chest and Back", "Back and Bi", "Back", "Shoulders", "Legs", "Other", "Full Body"]
 
-def generate(fileName, num):
+def generateTestData(fileName, num):
     with open(fileName, 'w') as f:
         for i in range(num):
             result = []
@@ -19,8 +20,3 @@ def contains(list, string):
         if string in i:
             return True
     return False
-
-    s = StringIO.StringIO(text)
-
-
-generate('tempTestData.csv', 20)
