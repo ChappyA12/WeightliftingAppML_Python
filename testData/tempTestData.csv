@@ -1,10 +1,10 @@
-2 Back#2 Chest
-3 Shoulders#2 Legs
-3 Shoulders#2 Chest
-4 Back#1 Abs / Core#4 Triceps
-4 Shoulders#1 Biceps
-2 Shoulders#1 Back#2 Abs / Core
-1 Triceps#3 Back#3 Chest
-3 Shoulders#3 Abs / Core
-4 Shoulders#3 Triceps
-4 Shoulders#3 Chest
+2 Shoulders
+2 Abs / Core#1 Legs#1 Triceps
+4 Abs / Core#1 Shoulders#2 Legs#2 Triceps
+1 Legs#1 Back
+3 Back#2 Legs#2 Triceps
+2 Triceps#3 Chest#1 Back
+3 Biceps#3 Chest#3 Shoulders#3 Legs#3 Back
+2 Triceps#3 Biceps
+2 Chest#2 Shoulders
+2 Triceps#2 Legs

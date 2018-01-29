@@ -36,15 +36,15 @@ def buildModelWithTrainingFiles(trainingFiles):
 
     # create model
     model = Sequential()
-    model.add(Dense(10, input_dim = 8, kernel_initializer = 'uniform', activation = 'relu'))
-    model.add(Dense(10, kernel_initializer = 'uniform', activation = 'relu'))
-    model.add(Dense(1, kernel_initializer = 'uniform', activation = 'sigmoid'))
+    model.add(Dense(12, input_dim = 8, kernel_initializer = 'uniform', activation = 'relu'))
+    model.add(Dense(12, kernel_initializer = 'uniform', activation = 'relu'))
+    model.add(Dense(10, kernel_initializer = 'uniform', activation = 'sigmoid'))
 
     # Compile model
     model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 
     # Fit the model
-    model.fit(trainingData, expectedOutput, epochs = 150, batch_size = 5)
+    model.fit(trainingData, expectedOutput, epochs = 500, batch_size = 5)
 
     # evaluate the model
     scores = model.evaluate(trainingData, expectedOutput)
@@ -57,5 +57,3 @@ def buildModelWithTrainingFiles(trainingFiles):
     model.save_weights("model/model.h5")
     plot_model(model, to_file='model/model.png', show_shapes = True, show_layer_names = True)
     print("Saved model to disk")
-
-buildModelWithTrainingFiles(['testData/testData1.csv', 'testData/testData2.csv', 'testData/testData3.csv', 'testData/testData4.csv'])

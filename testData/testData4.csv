@@ -69,7 +69,7 @@
 1 Triceps#2 Biceps#4 Chest#3 Back,Other
 3 Legs#3 Shoulders,Other
 2 Shoulders#3 Chest,Other
-1 Biceps#1 Shoulders,Other
+1 Biceps#1 Shoulders,Arms
 3 Legs#4 Shoulders,Other
 1 Legs#1 Back,Other
 2 Biceps#4 Triceps#3 Shoulders#2 Back,Other
@@ -78,7 +78,7 @@
 4 Olympic,Other
 2 Biceps#2 Chest#3 Back,Other
 4 Shoulders#1 Back#4 Biceps,Other
-2 Shoulders#1 Triceps,Other
+2 Shoulders#1 Triceps,Arms
 2 Olympic#1 Chest,Other
 1 Abs / Core#3 Chest#2 Biceps,Other
 3 Shoulders#3 Abs / Core#4 Chest,Other
@@ -98,3 +98,4 @@
 4 Shoulders#2 Chest,Shoulders
 2 Shoulders,Shoulders
 4 Shoulders,Shoulders
+2 Triceps#3 Chest#1 Back,Arms
