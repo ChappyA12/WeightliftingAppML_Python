@@ -1,1 +1,0 @@
-## Weightlifting App ML Model
