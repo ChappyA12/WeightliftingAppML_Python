@@ -52,8 +52,8 @@ def buildModelWithTrainingFiles(trainingFiles):
 
     # serialize model to JSON
     model_json = model.to_json()
-    with open("src/model.json", "w") as json_file:
+    with open("model/model.json", "w") as json_file:
         json_file.write(model_json)
-    model.save_weights("src/model.h5")
-    plot_model(model, to_file='src/model.png', show_shapes = True, show_layer_names = True)
+    model.save_weights("model/model.h5")
+    plot_model(model, to_file='model/model.png', show_shapes = True, show_layer_names = True)
     print("Saved model to disk")

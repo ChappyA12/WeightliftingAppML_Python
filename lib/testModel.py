@@ -8,12 +8,12 @@ CLASSIFICATIONS = ["Arms", "Chest and Tri", "Chest", "Chest and Back", "Back and
 
 def testWithTestFiles(fileNames, verbose):
     # load json and create model
-    json_file = open('src/model.json', 'r')
+    json_file = open('model/model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     model = model_from_json(loaded_model_json)
     # load weights into new model
-    model.load_weights("src/model.h5")
+    model.load_weights("model/model.h5")
     print("Loaded model from disk")
 
     total, numCorrect = 0, 0
