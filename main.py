@@ -4,9 +4,9 @@ from buildModel import buildModelWithTrainingFiles
 from testModel import testWithTestFiles
 from testDataGenerator import generateTestData
 
-buildModelWithTrainingFiles(['testData/testData1.csv', 'testData/testData2.csv', 'testData/testData3.csv', 'testData/testData4.csv'])
+#buildModelWithTrainingFiles(['testData/testData1.csv', 'testData/testData2.csv', 'testData/testData3.csv', 'testData/testData4.csv'])
 
-testWithTestFiles(['testData/testData1.csv', 'testData/testData2.csv', 'testData/testData3.csv', 'testData/testData4.csv'], True)
+testWithTestFiles(['testData/testData1.csv', 'testData/testData2.csv', 'testData/testData3.csv', 'testData/testData4.csv'], True, False)
 
-generateTestData('testData/tempTestData.csv', 10)
-testWithTestFiles(['testData/tempTestData.csv'], True)
+generateTestData('testData/tempTestData.csv', 100)
+testWithTestFiles(['testData/tempTestData.csv'], True, True)
