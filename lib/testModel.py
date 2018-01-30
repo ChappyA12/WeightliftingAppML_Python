@@ -25,8 +25,7 @@ def testWithTestFiles(fileNames, verbose, writeToFile):
             intSplit = [0] * len(globalData.BODY_SPLITS)
             for split in bodySplit:
                 arr = split.split(' ', 1)
-                if arr[1] not in 'Cardio':
-                    i = globalData.BODY_SPLITS.index(arr[1])
+                i = globalData.BODY_SPLITS.index(arr[1])
                 intSplit[i] = arr[0]
             testingData.append(intSplit)
             if (len(row) > 1):

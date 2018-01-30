@@ -21,8 +21,7 @@ def buildModelWithTrainingFiles(trainingFiles):
             intSplit = [0] * len(globalData.BODY_SPLITS)
             for split in bodySplit:
                 arr = split.split(' ', 1)
-                if arr[1] not in 'Cardio': #Ignoring Cardio due to minor role in classification determination
-                    i = globalData.BODY_SPLITS.index(arr[1])
+                i = globalData.BODY_SPLITS.index(arr[1])
                 intSplit[i] = arr[0]
             X.append(intSplit)
             hotClassifications = [0] * len(globalData.CLASSIFICATIONS)
@@ -32,19 +31,17 @@ def buildModelWithTrainingFiles(trainingFiles):
     trainingData = numpy.array(X)
     expectedOutput = numpy.array(Y)
 
-    print 'Training data count:', len(X)
-
     # create model
     model = Sequential()
-    model.add(Dense(12, input_dim = 8, kernel_initializer = 'uniform', activation = 'relu'))
+    model.add(Dense(12, input_dim = len(globalData.BODY_SPLITS), kernel_initializer = 'uniform', activation = 'relu'))
     model.add(Dense(12, kernel_initializer = 'uniform', activation = 'relu'))
-    model.add(Dense(10, kernel_initializer = 'uniform', activation = 'sigmoid'))
+    model.add(Dense(len(globalData.CLASSIFICATIONS), kernel_initializer = 'uniform', activation = 'softmax'))
 
-    # Compile model
+    # Compile model     #'categorical_crossentropy'
     model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 
     # Fit the model
-    model.fit(trainingData, expectedOutput, epochs = 250, batch_size = 5)
+    model.fit(trainingData, expectedOutput, epochs = 1000, batch_size = len(trainingData))
 
     # evaluate the model
     scores = model.evaluate(trainingData, expectedOutput)
