@@ -6,15 +6,16 @@ A series of programs written in Python using [Weightling App](https://github.com
 ``` "2 Abs / Core#3 Biceps#2 Triceps" ``` becomes ``` [ 2 0 3 0 0 0 0 0 2 ] ``` :
 
 | Abs / Core | back | Biceps | cardio | chest | legs | Olympic | shoulders | Triceps |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 2 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 2 |
 
 ### Categorical _expected_ output example:
 
-``` "arms" ``` becomes ``` [ 1 0 0 0 0 0 0 0 0 0 0 0 ] ``` :
-| abs | arms | back | cardio | legs | shoulders | push | pull | chestBack | chestBiceps | fullBody |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+``` "arms" ``` becomes ``` [ 0 1 0 0 0 0 0 0 0 0 0 0 ] ``` :
+
+| abs | arms | back | cardio | chest | legs | shoulders | push | pull | chestBack | chestBiceps | fullBody |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 <pre>
       ||||||||
       ||||||||
@@ -26,13 +27,13 @@ A series of programs written in Python using [Weightling App](https://github.com
 </pre>
 ### Categorical _actual_ output example:
 
-``` [ .981 .003 .001 .002 .000 .000 .000 .000 .000 .000 .012 .001 ] ``` becomes ``` "arms" ``` :
+``` [ .003 .981 .001 .002 .000 .000 .000 .000 .000 .000 .012 .001 ] ``` becomes ``` "arms" ``` :
 
-| abs | arms | back | cardio | legs | shoulders | push | pull | chestBack | chestBiceps | fullBody |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| .981 | .003 | .001 | .002 | .000 | .000 | .000 | .000 | .000 | .000 | .012 | .001 |
+| abs | arms | back | cardio | chest | legs | shoulders | push | pull | chestBack | chestBiceps | fullBody |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| .003 | .981 | .001 | .002 | .000 | .000 | .000 | .000 | .000 | .000 | .012 | .001 |
 
-### Current accuracy (644 training data points @ 5000 epochs, categorical crossentropy):
+### Current accuracy (744 training points @ 100,000 epochs, categorical crossentropy):
  - Training data: 100.0% :thumbsup:
  - Test data: 97.0% :thumbsup:
 
