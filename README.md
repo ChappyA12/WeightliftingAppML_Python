@@ -3,19 +3,18 @@ A series of programs written in Python using [Weightling App](https://github.com
 
 ### Body split training _input_ example:
 
-``` "2 Abs / Core#3 Biceps#2 Triceps" ``` becomes ``` [ 2 0 3 0 0 0 0 2 ] ``` :
+``` "2 Abs / Core#3 Biceps#2 Triceps" ``` becomes ``` [ 2 0 3 0 0 0 0 0 2 ] ``` :
 
-| Abs / Core | Back | Biceps | Chest | Legs | Olympic | Shoulders | Triceps |
+| Abs / Core | back | Biceps | cardio | chest | legs | Olympic | shoulders | Triceps |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 2 | 0 | 3 | 0 | 0 | 0 | 0 | 2 |
+| 2 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 2 |
 
 ### Categorical _expected_ output example:
 
-``` "Arms" ``` becomes ``` [ 1 0 0 0 0 0 0 0 0 0 ] ``` :
-
-| Arms | Chest and Tri | Chest | Chest and Back | Back and Bi | Back | Shoulders | Legs | Other | Full Body |
+``` "arms" ``` becomes ``` [ 1 0 0 0 0 0 0 0 0 0 0 0 ] ``` :
+| abs | arms | back | cardio | legs | shoulders | push | pull | chestBack | chestBiceps | fullBody |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 <pre>
       ||||||||
       ||||||||
@@ -27,15 +26,15 @@ A series of programs written in Python using [Weightling App](https://github.com
 </pre>
 ### Categorical _actual_ output example:
 
-``` [ .931 .004 .001 .003 .000 .000 .000 .000 .022 .004 ] ``` becomes ``` "Arms" ``` :
+``` [ .981 .003 .001 .002 .000 .000 .000 .000 .000 .000 .012 .001 ] ``` becomes ``` "arms" ``` :
 
-| Arms | Chest and Tri | Chest | Chest and Back | Back and Bi | Back | Shoulders | Legs | Other | Full Body |
+| abs | arms | back | cardio | legs | shoulders | push | pull | chestBack | chestBiceps | fullBody |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| .931 | .004 | .001 | .003 | .000 | .000 | .000 | .000 | .022 | .004 |
+| .981 | .003 | .001 | .002 | .000 | .000 | .000 | .000 | .000 | .000 | .012 | .001 |
 
-### Current accuracy (~550 training data points @ 2500 epochs, batch size 5):
- - Training data: 98.5% :thumbsup:
- - Test data: 94.0% :thumbsup:
+### Current accuracy (644 training data points @ 5000 epochs, categorical crossentropy):
+ - Training data: 100.0% :thumbsup:
+ - Test data: 97.0% :thumbsup:
 
 ### Current model
 ![Model Image](src/model.png)

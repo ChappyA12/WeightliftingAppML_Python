@@ -33,15 +33,15 @@ def buildModelWithTrainingFiles(trainingFiles):
 
     # create model
     model = Sequential()
-    model.add(Dense(12, input_dim = len(globalData.BODY_SPLITS), kernel_initializer = 'uniform', activation = 'relu'))
-    model.add(Dense(12, kernel_initializer = 'uniform', activation = 'relu'))
+    model.add(Dense(10, input_dim = len(globalData.BODY_SPLITS), kernel_initializer = 'uniform', activation = 'relu'))
+    model.add(Dense(14, kernel_initializer = 'uniform', activation = 'relu'))
     model.add(Dense(len(globalData.CLASSIFICATIONS), kernel_initializer = 'uniform', activation = 'softmax'))
 
-    # Compile model     #'categorical_crossentropy'
-    model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
+    # Compile model
+    model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 
     # Fit the model
-    model.fit(trainingData, expectedOutput, epochs = 1000, batch_size = len(trainingData))
+    model.fit(trainingData, expectedOutput, epochs = 100000, batch_size = len(trainingData))
 
     # evaluate the model
     scores = model.evaluate(trainingData, expectedOutput)
